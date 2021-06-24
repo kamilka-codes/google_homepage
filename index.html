@@ -4,24 +4,160 @@
 <head>
   <meta charset="utf-8">
 
-  <title>Google</title>
-  <meta name="Mock Google Homepage" content="kamilka_codes">
-  <meta name="kamilka_codes" content="The Odin Project">
+  <title>Google Homepage</title>
+  <meta name="description" content="Google Homepage - The Odin Project">
+  <meta name="keywords" content="The Odin Project, Google Homepage, kamilka_codes, turtlesarecool, Kamilka">
+  <meta name="author" content="Kamilka Nassr">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link rel="stylesheet" href="css/styles.css?v=1.0">
+  <style>
+    #submit {
+      background-color: #f8f9fa;
+      border: 1px solid #f8f9fa;
+      border-radius: 4px;
+      color: #3c4043;
+      font-family: Roboto,arial,sans-serif;
+      font-size: 14px;
+      margin: 11px 4px;
+      padding: 0 16px;
+      line-height: 27px;
+      height: 36px;
+      min-width: 54px;
+      text-align: center;
+      cursor: pointer;
+      user-select: none;
+      grid-area: submit;
+    }
+    #submit:hover {
+      border: 1px solid rgb(209, 212, 217);
+    }
+
+    #search_bar {
+      width: 80%;
+      max-width: 584px;
+      background: #fff;
+      display: flex;
+      border: 1px solid #dfe1e5;
+      border-radius: 24px;
+      z-index: 3;
+      height: 44px;
+      margin: 0 auto;
+      background: white url(https://michalosman.github.io/google-homepage/images/google-microphone.png) right no-repeat;
+      grid-area: search_bar;
+    }
+
+    #logo {
+      height: 92px;
+      width: 272px;
+      /*object-position: center bottom;
+      object-fit: contain;*/
+      position: center;
+      display: flex;
+      grid-area: logo;
+    }
+
+    #navbar {
+      display: grid;
+      height: 48px;
+      width: 338px;
+      padding: 6px;
+      grid-area: navbar;
+      grid-template-areas: "about store gap gmail images app_icon profile";
+    }
+
+    a {
+      color: #3c4043;
+      font-family: arial, sans-serif;
+      padding-right: 15px;
+      display: inline-block;
+      line-height: 24px;
+      vertical-align: middle;
+      font-size: 14px;
+    }
+    a:link { text-decoration: none;}
+    a:visited { text-decoration: none;}
+    a:hover { text-decoration: underline;}
+    a:active { text-decoration: none;}
+
+    #about { grid-area: about;}
+    #store { grid-area: store;}
+    #gap { grid-area: gap;}
+    #gmail { grid-area: gmail;}
+    #images { grid-area: images;}
+    #app_icon { 
+      grid-area: app_icon;
+      height: 18px;
+      width: 18px;
+      padding-top: 2px;
+    }
+    #profile { 
+      grid-area: profile;
+      border-radius: 50%;
+      height: 32px;
+      width: 32px;
+      justify-self: center;
+    }
+    #leaf { 
+      display: inline-grid;
+      width: 12.25px;
+      height: 14px;
+      grid-area: leaf;}
+    #ptag { grid-area: ptag;}
+    #advertising { grid-area: advertising;}
+    #business { grid-area: business;}
+    #howsearchworks { grid-area: howsearchworks;}
+    #privacy { grid-area: privacy;}
+    #terms { grid-area: terms;}
+    #settings { grid-area: settings;}
+
+    footer {
+      grid-area: footer;
+      grid-template-areas: "leaf ptag"
+      "advertising business howsearchworks privacy terms settings";
+      color: #70757a;
+      font-size: 14px;
+      font-family: Roboto, arial, sans-serif;
+    }
+
+    body {
+      display: grid;
+      grid-template-areas: "navbar" "logo" "search_bar" "submit" "footer";
+    }
+  </style>
 
 </head>
-
 <body>
+<header>
+  <nav id="navbar">
+    <a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=webhp&cd=&cad=rja&uact=8&ved=0ahUKEwjM0tTaga_xAhXyHzQIHdqPAfcQkNQCCAI&url=https%3A%2F%2Fabout.google%2F%3Ffg%3D1%26utm_source%3Dgoogle-US%26utm_medium%3Dreferral%26utm_campaign%3Dhp-header&usg=AOvVaw13L0SpN0L7ycx9R0_i4R2S" id="about">About</a>
+    <a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=webhp&cd=&cad=rja&uact=8&ved=0ahUKEwjM0tTaga_xAhXyHzQIHdqPAfcQpMwCCAM&url=https%3A%2F%2Fstore.google.com%2FUS%3Futm_source%3Dhp_header%26utm_medium%3Dgoogle_ooo%26utm_campaign%3DGS100042%26hl%3Den-US&usg=AOvVaw0wvkRBURf91YdMQCXOelDf" id="store">Store</a>
+    <br id="gap">
+    <a href="https://mail.google.com/mail/&ogbl" id="gmail">Gmail</a>
+    <a href="https://www.google.com/imghp?hl=en&ogbl" id="images">Images</a>
+    <a href="https://www.google.com/intl/en/about/products" id="app_icon"><img src="https://cdn3.iconfinder.com/data/icons/faticons/32/grid-2-01-512.png" alt="app grid icon" id="app_icon"></a>
+    <img src="https://www.jennstrends.com/wp-content/uploads/2013/10/bad-profile-pic-2-768x768.jpeg" alt="profile picture" id=profile>
+  </nav>
+</header>
   <main>
-    <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" alt="Google logo">
+    <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" alt="Google logo" id="logo">
     <form>
       <br>
       <input type="text" id="search_bar">
       <br>
-      <input type="submit" id="submit_search" value="Google Search">
-      <input type="submit" id="feeling_lucky" value="I'm Feeling Lucky">
+      <input type="submit" id="submit" value="Google Search">
+      <input type="submit" id="submit" value="I'm Feeling Lucky">
     </form>
   </main>
+  <footer>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAYCAMAAAAiV0Z6AAAAPFBMVEVLoEN0wU6CzFKCzFKCzFKCzFKCzFJSo0MSczNDmkCCzFJPoUMTczNdr0gmgziCzFITczMTczMTczMTczPh00jOAAAAFHRSTlPF/+bIsms8Ad///hX+//5/tXw7aMEAx10AAACaSURBVHgBbc4HDoRQCATQ33tbvf9dF9QxaCT9UQaltLHOh/golXKhMs5Xqa0xU1lyoa2fXFyQOsDG38qsLy4TaV+sFislovyhPzLJJrBu6eQOtpW0LjbJkzTuTDLRVNKa3uxJI+VdiRqXSeu6GW+Qxi29eLIi8H7EsYrT42BD+mQtNO5JMjRuC4lSY8V4hsLX0egGijvUSEP9AbylEsOkeCgWAAAAAElFTkSuQmCC" alt="leaf" id="leaf">
+    <p id="ptag">Carbon neutral since 2007</p>
+    <br>
+    <a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=webhp&cd=&cad=rja&uact=8&ved=0ahUKEwjM0tTaga_xAhXyHzQIHdqPAfcQkdQCCA8&url=https%3A%2F%2Fwww.google.com%2Fintl%2Fen_us%2Fads%2F%3Fsubid%3Dww-ww-et-g-awa-a-g_hpafoot1_1!o2%26utm_source%3Dgoogle.com%26utm_medium%3Dreferral%26utm_campaign%3Dgoogle_hpafooter%26fg%3D1&usg=AOvVaw3XLzhicA5ZZW0afDbW0l2T" id="advertising">Advertising</a>
+    <a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=webhp&cd=&cad=rja&uact=8&ved=0ahUKEwjM0tTaga_xAhXyHzQIHdqPAfcQktQCCBA&url=https%3A%2F%2Fwww.google.com%2Fservices%2F%3Fsubid%3Dww-ww-et-g-awa-a-g_hpbfoot1_1!o2%26utm_source%3Dgoogle.com%26utm_medium%3Dreferral%26utm_campaign%3Dgoogle_hpbfooter%26fg%3D1&usg=AOvVaw2SJ4zwRVXKyZr53qG9dm4K" id="business" alt="business">Business</a>
+    <a href="https://google.com/search/howsearchworks/?fg=1" alt="how search works" id="howsearchworks">How Search Works</a>
+    <a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=webhp&cd=&cad=rja&uact=8&ved=0ahUKEwjM0tTaga_xAhXyHzQIHdqPAfcQ8awCCBI&url=https%3A%2F%2Fpolicies.google.com%2Fprivacy%3Fhl%3Den%26fg%3D1&usg=AOvVaw25lN6TjyY2uszSImdhMejE" alt="privacy" id="privacy">Privacy</a>
+    <a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=webhp&cd=&cad=rja&uact=8&ved=0ahUKEwjM0tTaga_xAhXyHzQIHdqPAfcQ8qwCCBM&url=https%3A%2F%2Fpolicies.google.com%2Fterms%3Fhl%3Den%26fg%3D1&usg=AOvVaw2d8Ahs2oc0jxVOgPfpr4Fe" alt="terms" id="terms">Terms</a>
+    <a href="" alt="settings" id="settings">Settings</a>
+  </footer>
 </body>
 </html>
